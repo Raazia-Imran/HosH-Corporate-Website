@@ -1,0 +1,4 @@
+import type {Metadata} from "next";import {Geist,Geist_Mono} from "next/font/google";import {CursorGlow} from "@/components/motion/cursor-glow";import {Navigation} from "@/components/layout/navigation";import "./globals.css";
+const geist=Geist({variable:"--font-geist",subsets:["latin"]});const mono=Geist_Mono({variable:"--font-mono",subsets:["latin"]});
+export const metadata:Metadata={title:{default:"HosH — Industrial Assurance",template:"%s | HosH"},description:"Inspection, certification and technical assurance for high-consequence industries."};
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en" className={`${geist.variable} ${mono.variable}`}><body><a className="skip-link" href="#main-content">Skip to content</a><CursorGlow/><Navigation/><div id="main-content">{children}</div></body></html>}
