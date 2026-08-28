@@ -1,0 +1,1 @@
+import {InnerPage} from "@/components/sections/inner-page";import {pages} from "@/config/pages";export const metadata={title:"About"};export default function Page(){return <InnerPage {...pages.about}/>}
