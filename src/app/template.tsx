@@ -7,8 +7,8 @@ import {easeOutExpo} from "@/lib/motion";
 export default function PageTransition({children}:{children:ReactNode}){
   const reduced=useReducedMotion();
   return <motion.div
-    initial={reduced?false:{opacity:0,y:18,filter:"blur(8px)"}}
-    animate={{opacity:1,y:0,filter:"blur(0px)"}}
-    transition={{duration:reduced?0:.65,ease:easeOutExpo}}
+    initial={reduced?false:{opacity:0,y:8}}
+    animate={{opacity:1,y:0}}
+    transition={{duration:reduced?0:.45,ease:easeOutExpo}}
   >{children}</motion.div>;
 }
