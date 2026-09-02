@@ -1,3 +1,3 @@
-import type {Metadata} from "next";import {Navigation} from "@/components/layout/navigation";import "./globals.css";
+import type {Metadata} from "next";import {Navigation} from "@/components/layout/navigation";import {Footer} from "@/components/layout/footer";import "./globals.css";
 export const metadata:Metadata={title:{default:"HosH — Industrial Assurance",template:"%s | HosH"},description:"Inspection, certification and technical assurance for high-consequence industries."};
-export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en" data-scroll-behavior="smooth"><body><a className="skip-link" href="#main-content">Skip to content</a><Navigation/><div id="main-content">{children}</div></body></html>}
+export default function RootLayout({children}:Readonly<{children:React.ReactNode}>){return <html lang="en" data-scroll-behavior="smooth"><body><a className="skip-link" href="#main-content">Skip to content</a><Navigation/><div id="main-content">{children}</div><Footer/></body></html>}
